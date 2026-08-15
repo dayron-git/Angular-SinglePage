@@ -1,0 +1,9 @@
+.modal-custom {
+    width: 60%;
+    max-width: none; /* Bootstrap limita el ancho por defecto */
+  }
+  
+  .modal-custom .modal-content {
+    height: 15vh; /* 15% del alto de la ventana */
+  }
+  

@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-12 col-md-4 mb-4" *ngFor="let producto of products">
+      <div class="card h-100">
+        <a href="shop-single.html">
+          <img [src]="producto.imagen" class="card-img-top" alt="...">
+        </a>
+        <div class="card-body">
+          <ul class="list-unstyled d-flex justify-content-between">
+            <li>
+                <i *ngFor="let estrella of producto.estrellas"
+                   class="fa"
+                   [ngClass]="estrella ? 'text-warning fa-star' : 'text-muted fa-star'">
+                </i>
+            </li>              
+            <li class="text-muted text-right">{{ producto.precio | currency }}</li>
+          </ul>
+          <a href="shop-single.html" class="h2 text-decoration-none text-dark">{{ producto.nombre }}</a>
+          <p class="card-text">{{ producto.descripcion }}</p>
+          <p class="text-muted">Reviews ({{ producto.reviews }})</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
